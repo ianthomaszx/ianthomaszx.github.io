@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+
+:root {
+    --linear-gradient: linear-gradient(90deg, #002581 0%, #e50019 80%);
+    --linear-gradient-2: linear-gradient(0.25turn, rgb(27, 56, 131), rgb(203, 26, 44), hwb(261 1% 39% / 0));
+    --linear-gradient-3: linear-gradient(90deg, rgb(0, 18, 62) 0%, rgb(0, 25, 87) 80%);
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e8e8e8;
+    color: #1b3884;
+}
+
+#calculator {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+#calculator h2 {
+    font-size: 30px;
+    position: relative;
+}
+
+#calculator h2::before {
+    position: absolute;
+    content: '';
+    height: 3px;
+    width: 150px;
+    background: var(--linear-gradient);
+    bottom: 5px;
+}
+
+#input_box {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.input-field input::placeholder {
+    color: #203b7942;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.input-field label {
+    font-size: 15px;
+    color: #1b3884;
+    font-weight: 500;
+}
+
+.input-field input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #203b7942;
+    color: #203a79;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.input-field input:focus {
+    outline: none;
+}
+
+#result {
+    text-align: center;
+}
+
+#total {
+    font-size: 40px;
+}
+
+#calculate {
+    position: relative;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+    user-select: none;
+    touch-action: manipulation;
+}
+
+.shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: hsl(0deg 0% 0% / 0.25);
+    will-change: transform;
+    transform: translateY(2px);
+    transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+}
+
+.edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: #294691;
+}
+
+.front {
+    display: block;
+    position: relative;
+    padding: 12px 27px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    color: white;
+    background: #355fca;
+    will-change: transform;
+    transform: translateY(-4px);
+    transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+}
+
+#calculate:hover {
+    filter: brightness(110%);
+}
+
+#calculate:hover .front {
+    transform: translateY(-6px);
+    transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+#calculate:active .front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+}
+
+#calculate:hover .shadow {
+    transform: translateY(4px);
+    transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+#calculate:active .shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+}
+
+#calculate:focus:not(:focus-visible) {
+    outline: none;
+}
+
+@media only screen and (max-width: 900px) {
+    
+    * {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    #container {
+        padding: 10px;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #e8e8e8;
+        color: #1b3884;
+    }
+    
+    #calculator {
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        scale: 0.8;
+    }
+    
+    #calculator h2 {
+        font-size: 30px;
+        position: relative;
+    }
+    
+    #calculator h2::before {
+        position: absolute;
+        content: '';
+        height: 3px;
+        width: 150px;
+        background: var(--linear-gradient);
+        bottom: 5px;
+    }
+    
+    #input_box {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+}
