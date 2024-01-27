@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<!-- ianthomaszx -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="src/css/style.css">
+
+    <title>Calculadora de Produtividade</title>
+</head>
+
+<body>
+    <main id="container">
+        <div id="calculator">
+            <h2>
+                <a class="input-field" href="index.html">Produtividade - Caixaria</a>
+            </h2>
+
+            <div id="input_box">
+                <div class="input-field">
+                    <label for="os">Quantidade de OS:</label>
+                    <input type="number" id="os" placeholder="41,00">
+                </div>
+
+                <div class="input-field">
+                    <label for="apt">Quantidade de Apanha:</label>
+                    <input type="number" id="apt" placeholder="332,00">
+                </div>
+
+                <div class="input-field">
+                    <label for="itens">Quantidade de Itens:</label>
+                    <input type="number" id="itens" placeholder="7.125,00">
+                </div>
+            </div>
+
+            <div id="result">
+                <h4>Resultado:</h4>
+                <span id="total">
+                    0,00%
+                </span>
+            </div>
+
+            <button id="calculate">
+                <span class="shadow"></span>
+                <span class="edge"></span>
+                <span class="front text"> Calcular
+                </span>
+            </button>
+
+            <div class="radio-inputs">
+                <label class="radio">
+                    <input type="radio" name="radio" id="fracao">
+                    <a class="btn-link" href="caixara8h.html"> <span class="name">Por 8h</span> </a>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="radio" id="caixaria" checked="">
+                    <span class="name">Por 10h</span>
+                </label>
+            </div>
+
+        </div>
+    </main>
+
+    <script type="text/javascript" src="src/js caixaria/c10h.js"></script>
+</body>
+
+</html>
